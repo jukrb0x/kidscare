@@ -1,0 +1,10 @@
+{
+  "appId": "org.hciicu.kidscare.app",
+  "appName": "KidsCare",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "www",
+  "server": {
+    "url": "http://172.16.122.224:8080"
+  }
+}

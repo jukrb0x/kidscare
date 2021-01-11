@@ -1,0 +1,12 @@
+{
+  "name": "kidscare",
+  "version": "0.0.1",
+  "description": "Covid-19 and health helper kit for kids",
+  "author": "jukrb0x <15688641+jukrb0x@users.noreply.github.com>",
+  "private": true,
+  "dependencies": {
+    "@capacitor/cli": "^2.0.0",
+    "@capacitor/core": "^2.0.0",
+    "@capacitor/ios": "2.4.5"
+  }
+}
