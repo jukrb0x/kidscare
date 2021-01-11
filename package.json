@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"No test specified\" && exit 0",
-    "serve": "quasar dev",
+    "h5": "quasar dev",
     "ios": "quasar dev -m capacitor -T ios"
   },
   "dependencies": {
