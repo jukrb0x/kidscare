@@ -2,32 +2,40 @@
 
 Covid-19 and health helper kit for kids
 
-## Credits
-
-Move this to the last section when done.
-
-### Fonts
-
-Cheri
-
 ## Install the dependencies
 
 ```bash
 yarn
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+### Start the emulator
+
+Everything is hot-reload, thanks to quasar framework.
 
 ```bash
-quasar dev
+# ios emulator with capacitor (iPhone 11 emulator is advised)
+npm run ios
 ```
 
-### Build the app for production
+if you don't have Xcode for simulating, can try h5 mode
 
 ```bash
-quasar build
+# redirected to [quasar dev]
+npm run serve
+```
+
+or
+
+```
+quasar dev
 ```
 
 ### Customize the configuration
 
 See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+
+## Credits
+
+### Fonts
+
+Cheri
