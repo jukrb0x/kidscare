@@ -6,7 +6,9 @@
   "author": "jukrb0x <15688641+jukrb0x@users.noreply.github.com>",
   "private": true,
   "scripts": {
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "serve": "quasar dev",
+    "ios": "quasar dev -m capacitor -T ios"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
