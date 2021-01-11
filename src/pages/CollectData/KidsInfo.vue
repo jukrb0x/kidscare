@@ -8,20 +8,19 @@
         color="blue-1"
         icon="arrow_back_ios"
         label="Back"
-        @click="routerBack"
+        @click="routerHandler('/collectData')"
       ></q-btn>
     </div>
   </q-page>
 </template>
 
 <script>
+import RouterMixin from "components/RouterMixin";
+
 export default {
   name: "KidsInfo",
-  methods: {
-    routerBack() {
-      this.$router.push({ path: "/collectData" });
-    }
-  }
+  mixins: [RouterMixin],
+  methods: {}
 };
 </script>
 

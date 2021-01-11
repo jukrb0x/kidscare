@@ -17,7 +17,7 @@
           outline
           class="go"
           label="Get Started"
-          @click="routerGo"
+          @click="routerHandler('/collectData/kidsInfo')"
         ></q-btn>
         <q-btn
           size="15px"
@@ -37,8 +37,11 @@
 </template>
 
 <script>
+import RouterMixin from "components/RouterMixin";
+
 export default {
   name: "CollectData",
+  mixins: [RouterMixin],
   data() {
     return {
       tip: {
@@ -49,11 +52,7 @@ export default {
       }
     };
   },
-  methods: {
-    routerGo() {
-      this.$router.push("/collectData/kidsInfo");
-    }
-  }
+  methods: {}
 };
 </script>
 
