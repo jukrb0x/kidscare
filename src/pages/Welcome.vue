@@ -39,7 +39,7 @@ export default {
   line-height: 35px
 
 .logo-block
-  margin-top: 180px
+  margin-top: 240px
 
 .logo-text span
   &:first-child
