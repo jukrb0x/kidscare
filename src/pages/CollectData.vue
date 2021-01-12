@@ -25,6 +25,7 @@
           flat
           class="back"
           label="Exit"
+          @click="routerHandler('/')"
         ></q-btn>
       </div>
       <div class="indicator">
