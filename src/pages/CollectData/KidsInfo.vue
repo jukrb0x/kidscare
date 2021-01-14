@@ -76,10 +76,18 @@
 
           <div class="btn-group">
             <q-btn label="Submit" type="submit" outline color="blue-1" />
-            <q-btn
+            <!-- <q-btn
               label="Reset"
               type="reset"
               color="blue-1"
+              flat
+              outline
+              class="q-ml-sm"
+            /> -->
+            <q-btn
+              label="Skip"
+              color="blue-1"
+              @click="routerHandler('/')"
               flat
               outline
               class="q-ml-sm"
@@ -98,12 +106,18 @@ export default {
   name: "KidsInfo",
   mixins: [RouterMixin],
   methods: {
+    onSubmit() {
+      this.routerHandler("/");
+    },
     onReset() {
       this.me.name = null;
       this.me.age = null;
       this.parent.relation = null;
       this.parent.phone = null;
     }
+  },
+  mounted() {
+    // pop up, inform to skip
   },
   data() {
     return {
