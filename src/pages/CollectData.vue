@@ -3,36 +3,41 @@
   <q-page padding class="my-gradient flex column">
     <div class="body">
       <!--TODO: Add logo here-->
-      <div class="title text-h2 text-blue-1">
+      <div class="title text-h2 text-blue-1" @click="routerHandler('/')">
+        
         Hi there!
       </div>
       <div class="tips text-white text-weight-regular">
         {{ tip.l1 }}
         <br />
+        {{ tip.l2 }}
         <!--        <span style="font-size: 16px;">{{ tip.l2 }}</span>-->
       </div>
-      <div class="btn">
-        <q-btn
-          size="18px"
-          outline
-          class="go"
-          label="Get Started"
-          @click="routerHandler('/collectData/kidsInfo')"
-        ></q-btn>
-        <q-btn
-          size="15px"
-          :ripple="false"
-          flat
-          class="back"
-          label="Exit"
-          @click="routerHandler('/')"
-        ></q-btn>
-      </div>
-      <div class="indicator">
-        <q-icon class="arrow animated" name="north"></q-icon>
+      <div class="btn-group">
+        <div class="btn">
+          <q-btn
+            size="18px"
+            outline
+            class="go"
+            label="Get Started"
+            @click="routerHandler('/collectData/kidsInfo')"
+          ></q-btn>
+          <!--        <q-btn-->
+          <!--          size="15px"-->
+          <!--          :ripple="false"-->
+          <!--          flat-->
+          <!--          class="back"-->
+          <!--          label="Exit"-->
+          <!--          @click="routerHandler('/')"-->
+          <!--        ></q-btn>-->
+        </div>
+        <div class="indicator">
+          <q-icon class="arrow animated" name="north"></q-icon>
 
-        Click here to start!
+          Click here to start!
+        </div>
       </div>
+      <img class="kids-yoga" src="~assets/Kids-yoga.png" alt="" />
     </div>
   </q-page>
 </template>
@@ -47,8 +52,9 @@ export default {
     return {
       tip: {
         l1:
-          "Thank you for using this app, this app will help you with the knowledge to COVID-19, the pandemic ....",
-        l2:
+          "Thank you for using this app, this app will help you with the knowledge to COVID-19, have fun and learn through this app!",
+        l2: "Let's get you acquainted.",
+        l3:
           "Continuing with the next steps will indicate your acceptance of our user agreement and privacy consent."
       }
     };
@@ -68,16 +74,17 @@ export default {
   line-height: normal
   margin-top: 20px
   //margin-bottom: 45px
-.btn
-  margin-top: 25px
-  .go
-    color: $light-blue-1
-  .back
-    color: $light-blue-2
+.btn-group
+  margin-top: 75px
+  .btn
+    .go
+      color: $light-blue-1
+    .back
+      color: $light-blue-2
 
 .indicator
   color: white
-  margin-top: 10px
+  margin-top: 15px
   margin-left: 5px
   font-size: large
   .arrow
@@ -85,4 +92,7 @@ export default {
     //height: 10px
     animation-duration: 1.5s
     animation-iteration-count: infinite
+
+.kids-yoga
+  margin-left: 160px
 </style>
