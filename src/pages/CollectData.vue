@@ -4,7 +4,7 @@
     <div class="body">
       <!--TODO: Add logo here-->
       <div class="title text-h2 text-blue-1" @click="routerHandler('/')">
-        
+        <!-- for demo, invisible router trigger to home -->
         Hi there!
       </div>
       <div class="tips text-white text-weight-regular">
