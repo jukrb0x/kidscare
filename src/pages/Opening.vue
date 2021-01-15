@@ -21,7 +21,7 @@
 <script>
 import RouterMixin from "components/RouterMixin";
 export default {
-  name: "Welcome",
+  name: "Opening",
   mixins: [RouterMixin],
   data() {
     return {

@@ -67,7 +67,7 @@ export default {
 .body
   margin-left: 10px
 .title
-  margin: 220px auto 10px 0
+    margin: 200px auto 10px 0
 .tips
   font-size: $body-text
   font-weight: normal
