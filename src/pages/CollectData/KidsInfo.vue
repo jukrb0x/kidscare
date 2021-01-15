@@ -1,5 +1,27 @@
 <template>
-  <q-page padding class="my-gradient flex column">
+  <q-page padding class="flex column">
+    <!-- TODO: replace the details of pop-up -->
+    <q-dialog
+      v-model="policyPopup"
+      persistent
+      transition-show="scale"
+      transition-hide="scale"
+    >
+      <q-card class="bg-teal text-white" style="width: 300px">
+        <q-card-section>
+          <div class="text-h6">Persistent</div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          Click/Tap on the backdrop.
+        </q-card-section>
+
+        <q-card-actions align="right" class="bg-white text-teal">
+          <q-btn flat label="OK" v-close-popup />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
     <div class="header">
       <q-btn
         class="back q-my-sm"
@@ -15,7 +37,12 @@
     <div class="body">
       <div class="text">
         <div class="q-pa-sm q-gutter-sm">
-          <q-banner inline-actions rounded class="bg-blue-1 text-black-2">
+          <q-banner
+            inline-actions
+            rounded
+            class="bg-blue-1 text-black-2"
+            @click="policyPopup = true"
+          >
             <template v-slot:avatar>
               <q-icon name="mdi-account-heart-outline" color="primary" />
             </template>
@@ -46,7 +73,7 @@
               val => (val > 0 && val < 100) || 'Please type a real age'
             ]"
           />
-
+          <!-- FIXME: fix the type of input fields -->
           <q-input
             color="blue-1"
             filled
@@ -87,7 +114,7 @@
             <q-btn
               label="Skip"
               color="blue-1"
-              @click="routerHandler('/')"
+              @click="routerToNextPage"
               flat
               outline
               class="q-ml-sm"
@@ -114,13 +141,15 @@ export default {
       this.me.age = null;
       this.parent.relation = null;
       this.parent.phone = null;
+    },
+    routerToNextPage() {
+      this.routerHandler("/intro");
     }
   },
-  mounted() {
-    // pop up, inform to skip
-  },
+  mounted() {},
   data() {
     return {
+      policyPopup: true,
       info: "Let your parents help you through!",
       accept: false,
       me: {
@@ -129,7 +158,7 @@ export default {
       },
       parent: {
         relation: null,
-        relations: ["Parents", "Grandparents", "Brotehr/Sister", "Others"],
+        relations: ["Parents", "Grandparents", "Brother/Sister", "Others"],
         phone: null
       }
     };
@@ -140,7 +169,6 @@ export default {
 <style lang="sass" scoped>
 .header
   position: sticky
-  margin-top: 50px
 
 .body
   margin-left: 10px
