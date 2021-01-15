@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-page-container>
+    <q-page-container class="my-gradient ios-top">
       <router-view />
     </q-page-container>
   </q-layout>
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "Welcome Layout",
+  name: "WelcomeLayout",
   data() {
     return {};
   }
