@@ -1,15 +1,27 @@
 const routes = [
   {
     path: "/",
+    component: () => import("layouts/OpeningLayout.vue"),
+    children: [{ path: "", component: () => import("pages/Opening.vue") }]
+  },
+  {
+    path: "/",
     component: () => import("layouts/WelcomeLayout.vue"),
     children: [
-      { path: "", component: () => import("pages/Welcome.vue") },
-      { path: "collectData", component: () => import("pages/CollectData.vue") },
+      {
+        path: "collectData",
+        component: () => import("pages/CollectData/CollectData.vue")
+      },
       {
         path: "collectData/kidsInfo",
         component: () => import("pages/CollectData/KidsInfo")
       }
     ]
+  },
+  {
+    path: "/intro",
+    component: () => import("layouts/IntroLayout.vue"),
+    children: [{ path: "", component: () => import("pages/IntroFeatures.vue") }]
   },
   {
     path: "/home",
