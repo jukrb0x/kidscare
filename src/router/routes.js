@@ -24,9 +24,27 @@ const routes = [
     children: [{ path: "", component: () => import("pages/IntroFeatures.vue") }]
   },
   {
-    path: "/home",
-    component: () => import("layouts/MainLayout.vue"),
-    children: [{ path: "", component: () => import("pages/Home.vue") }]
+    path: "/Framework",
+    redirect: "/Framework/home",
+    component: () => import("layouts/HomeLayout.vue"),
+    children: [
+      {
+        path: "/Framework/home",
+        component: () => import("pages/Framework/Home.vue")
+      },
+      {
+        path: "/Framework/games",
+        component: () => import("pages/Framework/Games.vue")
+      },
+      {
+        path: "/Framework/stats",
+        component: () => import("pages/Framework/Stats.vue")
+      },
+      {
+        path: "/Framework/me",
+        component: () => import("pages/Framework/Me.vue")
+      }
+    ]
   },
 
   // Always leave this as last one,
